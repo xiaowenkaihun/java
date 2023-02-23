@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="username"><br>
+    <!--插值表达式-->
+    {{username}}
+
+    <a v-bind:href="url">点击一下</a>
+
+    <input v-model="url">
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        // data的简化书写
+        data() {
+            return {
+                username: "",
+                url: "https://www.baidu.com"
+
+            }
+        }
+        /*data: function () {
+          return{
+            username:""
+          }
+        }*/
+    })
+
+</script>
+</body>
+</html>

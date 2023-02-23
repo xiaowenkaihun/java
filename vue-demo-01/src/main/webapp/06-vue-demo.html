@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+</head>
+<body>
+<div id="app">
+
+    <div v-for="addr in addrs">
+        {{addr}}
+    </div>
+
+    <hr>
+
+    <div v-for="(addr, i) in addrs">
+        {{i+1}}---{{addr}}
+    </div>
+
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        // data的简化书写
+        data(){
+          return{
+
+              addrs:["北京","上海","武汉"]
+          }
+        },
+
+        mounted(){
+            alert("加载完成")
+        }
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加品牌</title>
+</head>
+<body>
+<div id="app">
+    <h3>添加品牌</h3>
+    <form action="" method="post">
+        品牌名称：<input id="brandName" name="brandName" v-model="brand.brandName"><br>
+        企业名称：<input id="companyName" name="companyName" v-model="brand.companyName"><br>
+        排序：<input id="ordered" name="ordered" v-model="brand.ordered"><br>
+        描述信息：<textarea rows="5" cols="20" id="description" name="description" v-model="brand.description"></textarea><br>
+        状态：
+        <input type="radio" name="status" value="0" v-model="brand.status">禁用
+        <input type="radio" name="status" value="1" v-model="brand.status">启用<br>
+
+        <input type="button" id="btn" value="提交" @click="submitForm">
+    </form>
+</div>
+
+
+<script src="js/axios-0.18.0.js"></script>
+<script src="js/vue.js"></script>
+
+<script>
+    /*vue解决传统AJAX异步请求中需要将表单数据转为JSON数据的过程
+    * 通过v-model*/
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                brand:{}
+            }
+        },
+        methods: {
+            submitForm() {
+                var _this = this;
+                // 发送AJAX的请求
+                axios({
+                    method: "post",
+                    url: "http://localhost:80/vue-demo-02/addServlet",
+                    data: _this.brand
+                }).then(function (resp) {
+                    if (resp.data == "success") {
+                        location.href = "http://localhost:80/vue-demo-02/brand.html"
+                    }
+                })
+            }
+        }
+    })
+
+    /*document.getElementById("btn").onclick = function (){
+
+        var formData = {
+            brandName: "",
+            companyName: "",
+            ordered: "",
+            description: "",
+            status: ""
+        }
+
+        let brandName = document.getElementById("brandName").value;
+        formData.brandName = brandName;
+        let companyName = document.getElementById("companyName").value;
+        formData.companyName = companyName;
+        let ordered = document.getElementById("ordered").value;
+        formData.ordered = ordered;
+        let description = document.getElementById("description").value;
+        formData.description = description;
+        let status = document.getElementsByName("status");
+        for (let i = 0; i < status.length; i++) {
+            if(status[i].checked){
+                formData.status = status[i].value;
+            }
+        }
+
+        console.log(formData)
+
+        axios({
+            method:"post",
+            url:"http://localhost:8080/vue-demo-01/addServlet",
+            data: formData
+        }).then(function (resp) {
+            if(resp.data == "success"){
+                location.href = "http://localhost:8080/vue-demo-01/brand.html"
+            }
+        })
+    }*/
+</script>
+</body>
+</html>

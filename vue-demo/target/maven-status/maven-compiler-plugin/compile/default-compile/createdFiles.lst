@@ -1,0 +1,9 @@
+com\itwen\service\BrandService.class
+com\itwen\pojo\Brand.class
+com\itwen\service\impl\BrandServiceImpl.class
+com\itwen\web\servlet\BaseServlet.class
+com\itwen\mapper\BrandMapper.class
+com\itwen\pojo\PageBean.class
+com\itwen\web\servlet\BrandServlet.class
+com\itwen\util\SqlSessionFactoryUtils.class
+com\itwen\web\servlet\UserServlet.class

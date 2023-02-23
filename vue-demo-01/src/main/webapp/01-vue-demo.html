@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+</head>
+<body>
+<div id="app">
+<input v-model="username">
+  <!--插值表达式-->
+  {{username}}
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    // data的简化书写
+    data(){
+      return{
+        username:""
+      }
+    }
+    /*data: function () {
+      return{
+        username:""
+      }
+    }*/
+  })
+
+</script>
+</body>
+</html>

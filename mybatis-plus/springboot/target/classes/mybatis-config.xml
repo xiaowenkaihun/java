@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.itwen.pojo"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"/>
+
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor">
+            <!--最大的执行时间限制-->
+            <property name="maxTime" value="100"/>
+            <!--对输出的sql格式化，默认为false -->
+            <property name="forMat" value="true"/>
+        </plugin>
+    </plugins>
+
+</configuration>

@@ -1,0 +1,16 @@
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\mapper\UserMapper.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\service\UserService.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\pojo\User.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\service\BrandService.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\checkcode\CheckCodeServlet.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\mapper\BrandMapper.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\util\SqlSessionUtils.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\loginandregister\LoginServlet.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\storehouse\SelectAllServlet.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\loginandregister\RegisterServlet.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\storehouse\ServletUpdate.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\util\CheckCodeUtil.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\storehouse\ServletDeleteBrand.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\storehouse\ServletAddBrand.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\web\storehouse\ServletSelectById.java
+E:\JavaWorkspace\MVC-demo\src\main\java\com\itwen\pojo\Brand.java
